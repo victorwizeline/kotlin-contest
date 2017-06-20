@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Kotlin Contest</string>
+    <string name="top_artists">Top Artist</string>
+</resources>

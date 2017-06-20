@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/Users/victor/AndroidStudioProjects/KotlinTest/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar
+FILE_HASH=ab4d5ada1f6f9eb1d6b2b3cdac020b3d4136cece
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true
