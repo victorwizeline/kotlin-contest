@@ -6,7 +6,7 @@
 
 - [Retrofit](https://github.com/square/retrofit/) - REST client for Android developed by Square
 - [RxAndroid](https://github.com/ReactiveX/RxAndroid/) - Reactive Extensions for Android
-- [Picasso](http://square.github.io/picasso/) - Image loading and caching library for Android
+- [Picasso](https://github.com/square/picasso/) - Image loading and caching library for Android
 
 ## License
 
