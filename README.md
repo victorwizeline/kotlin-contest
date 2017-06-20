@@ -2,11 +2,15 @@
 
 **Kotlin Contest** is an android app that shows a list of top albums. The app utilizes [Last FM API](http://www.last.fm/api).
 
+## Project setup
+
+To run the project you should obtain a new Last FM api key that needs to be set in the gradle.properties file.
+
 ## Open-source libraries used
 
-- [Retrofit](https://github.com/square/retrofit/) - REST client for Android developed by Square
-- [RxAndroid](https://github.com/ReactiveX/RxAndroid/) - Reactive Extensions for Android
-- [Picasso](https://github.com/square/picasso/) - Image loading and caching library for Android
+- [Retrofit](https://github.com/square/retrofit/) - REST client for Android developed by Square.
+- [RxAndroid](https://github.com/ReactiveX/RxAndroid/) - Reactive Extensions for Android.
+- [Picasso](https://github.com/square/picasso/) - Image loading and caching library for Android.
 
 ## License
 
