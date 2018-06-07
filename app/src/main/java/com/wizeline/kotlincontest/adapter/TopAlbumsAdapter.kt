@@ -4,16 +4,23 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import com.wizeline.kotlincontest.R
-import com.wizeline.kotlincontest.models.Response
 import com.squareup.picasso.Picasso
+import com.wizeline.kotlincontest.R
+import com.wizeline.kotlincontest.models.Album
+import kotlinx.android.synthetic.main.item_album.view.*
 
-class TopAlbumsAdapter(var response: Response) : RecyclerView.Adapter<TopAlbumsAdapter.ViewHolder>() {
+class TopAlbumsAdapter : RecyclerView.Adapter<TopAlbumsAdapter.ViewHolder>() {
+
+    class Sizes {
+        companion object {
+            const val MEDIUM = "medium"
+        }
+    }
+
+    private var albums: List<Album> = ArrayList()
 
     override fun getItemCount(): Int {
-        return response.albums.album.size
+        return albums.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,15 +29,26 @@ class TopAlbumsAdapter(var response: Response) : RecyclerView.Adapter<TopAlbumsA
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val album = response.albums.album[position]
-        holder.textViewAlbum.text = album.name
-        holder.textViewArtist.text = album.artist.name
-        Picasso.with(holder.itemView.context).load(album.image[2].url).into(holder.imageViewAlbum)
+        holder.bind(albums[position])
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imageViewAlbum = itemView.findViewById(R.id.image_view_album) as ImageView
-        var textViewAlbum = itemView.findViewById(R.id.text_view_album) as TextView
-        var textViewArtist = itemView.findViewById(R.id.text_view_artist) as TextView
+    fun setResponse(albums: List<Album>) {
+        this.albums = albums
+        notifyDataSetChanged()
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        fun bind(album: Album) {
+            val context = itemView.context
+            itemView.textViewAlbum.text = album.name
+            itemView.textViewArtist.text = album.artist.name
+            for (url in album.image) {
+                if (url.size.contentEquals(Sizes.MEDIUM)) {
+                    Picasso.with(context).load(url.url).into(itemView.imageViewAlbum)
+                    break
+                }
+            }
+        }
     }
 }

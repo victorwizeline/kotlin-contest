@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,46 +8,47 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/image_view_album"
+        android:id="@+id/imageViewAlbum"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="12dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
+        android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/white" />
+        app:srcCompat="@android:color/white"/>
 
     <TextView
-        android:id="@+id/text_view_album"
+        android:id="@+id/textViewAlbum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
-        android:text="Album"
+        android:text="@string/album"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_view_artist"
+        app:layout_constraintBottom_toTopOf="@+id/textViewArtist"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_view_album"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewAlbum"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/text_view_artist"
+        android:id="@+id/textViewArtist"
         android:layout_width="0dp"
         android:layout_height="19dp"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
-        android:text="Artist"
+        android:text="@string/artist"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_view_album" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewAlbum"/>
 
     <View
         android:layout_width="match_parent"
@@ -57,5 +59,6 @@
         android:background="#1e1e1e"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>
